@@ -41,7 +41,7 @@ pipeline {
  				 sh 'sudo  apt-get update'
  				  sh 'sudo apt-get install pack-cli'
 			   
-				  sh 'pack build app --builder paketobuildpacks/builder:full'
+				  sh 'pack build app --builder cnbs/sample-builder:bionic'
 			    	  sh "sudo docker tag app:latest gcr.io/tech-rnd-project/faz-todo:${env.BUILD_ID}"
 			    
 		    }
